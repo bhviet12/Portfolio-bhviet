@@ -1,36 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { ThemeProvider } from './contexts/ThemeContext';
+import { LanguageProvider } from './contexts/LanguageContext';
+import Navigation from './components/Navigation';
+import Home from './components/Home';
+import About from './components/About';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>My React + TypeScript App</h1>
-      <h2>Deployed on Render</h2>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          This is a sample React TypeScript application built with Vite
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Ready to deploy on Render!
-      </p>
-    </>
-  )
+    <ThemeProvider>
+      <LanguageProvider>
+        <div className="bg-white dark:bg-zinc-900 transition-colors duration-300">
+          <Navigation />
+          <Home />
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+        </div>
+      </LanguageProvider>
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;
