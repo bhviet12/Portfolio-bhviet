@@ -1,4 +1,5 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState } from 'react';
+import type { ReactNode } from 'react';
 import type { Language } from '../types';
 
 interface LanguageContextType {
@@ -20,7 +21,7 @@ const translations = {
 
     // Home Section
     greeting: 'Xin chào',
-    intro: 'Tôi là một Developer đam mê công nghệ',
+    intro: 'Tôi là lập trình viên Frontend đầy đam mê',
     viewGithub: 'Xem GitHub',
     contactMe: 'Liên hệ với tôi',
 
@@ -60,7 +61,7 @@ const translations = {
 
     // Home Section
     greeting: 'Hello',
-    intro: 'I am a passionate Developer',
+    intro: 'I am a passionate Frontend Developer',
     viewGithub: 'View GitHub',
     contactMe: 'Contact Me',
 
@@ -110,6 +111,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useLanguage() {
   const context = useContext(LanguageContext);
   if (context === undefined) {
