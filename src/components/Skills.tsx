@@ -1,4 +1,5 @@
 import { useLanguage } from '../contexts/LanguageContext';
+import { useTheme } from '../contexts/ThemeContext';
 import type { Skill } from '../types';
 
 const skills: Skill[] = [
@@ -22,14 +23,21 @@ const skills: Skill[] = [
 
 export default function Skills() {
   const { t } = useLanguage();
+  const { theme } = useTheme();
 
   return (
     <section
       id="skills"
-      className="min-h-screen flex items-center justify-center bg-white dark:bg-zinc-900 py-20"
+      className="min-h-screen flex items-center justify-center py-20"
+      style={{
+        backgroundColor: theme === 'light' ? '#ffffff' : '#000000'
+      }}
     >
       <div className="container mx-auto px-4 max-w-7xl">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-black dark:text-white mb-8 md:mb-12">
+        <h2
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 md:mb-12"
+          style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}
+        >
           {t('skillsTitle')}
         </h2>
 

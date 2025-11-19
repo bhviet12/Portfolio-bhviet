@@ -15,15 +15,22 @@ function App() {
     AOS.init({
       duration: 1000,
       once: false,
-      offset: 200,
+      offset: 50,
       easing: 'ease-in-out',
+      mirror: true,
+      anchorPlacement: 'top-bottom',
+      disable: false,
+      startEvent: 'DOMContentLoaded',
     });
+
+    // Refresh AOS to ensure it detects all elements
+    AOS.refresh();
   }, []);
 
   return (
     <ThemeProvider>
       <LanguageProvider>
-        <div className="bg-white dark:bg-black transition-colors duration-300">
+        <div>
           <Navigation />
           <Home />
           <About />

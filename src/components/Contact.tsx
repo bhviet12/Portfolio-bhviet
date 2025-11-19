@@ -1,7 +1,9 @@
 import { useLanguage } from '../contexts/LanguageContext';
+import { useTheme } from '../contexts/ThemeContext';
 
 export default function Contact() {
   const { t } = useLanguage();
+  const { theme } = useTheme();
 
   const socialLinks = [
     {
@@ -36,11 +38,17 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center justify-center bg-white dark:bg-zinc-900 py-20"
+      className="min-h-screen flex items-center justify-center py-20"
+      style={{
+        backgroundColor: theme === 'light' ? '#ffffff' : '#000000'
+      }}
     >
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black dark:text-white mb-6">
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
+            style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}
+          >
             {t('contactTitle')}
           </h2>
 
@@ -56,7 +64,11 @@ export default function Contact() {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-zinc-100 dark:bg-zinc-800 text-black dark:text-white hover:bg-red-500 hover:text-white dark:hover:bg-red-500 transition-all duration-300 hover:scale-110"
+                className="p-3 rounded-full hover:bg-red-500 hover:text-white transition-all duration-300 hover:scale-110"
+                style={{
+                  backgroundColor: theme === 'light' ? '#f4f4f5' : '#27272a',
+                  color: theme === 'light' ? '#000000' : '#ffffff'
+                }}
                 aria-label={link.name}
               >
                 {link.icon}

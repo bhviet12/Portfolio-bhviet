@@ -1,4 +1,5 @@
 import { useLanguage } from '../contexts/LanguageContext';
+import { useTheme } from '../contexts/ThemeContext';
 import type { Project } from '../types';
 
 const projects: Project[] = [
@@ -38,14 +39,21 @@ const projects: Project[] = [
 
 export default function Projects() {
   const { t } = useLanguage();
+  const { theme } = useTheme();
 
   return (
     <section
       id="projects"
-      className="min-h-screen flex items-center justify-center bg-zinc-50 dark:bg-zinc-800 py-20"
+      className="min-h-screen flex items-center justify-center py-20"
+      style={{
+        backgroundColor: theme === 'light' ? '#fafafa' : '#000000'
+      }}
     >
       <div className="container mx-auto px-4 max-w-7xl">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-black dark:text-white mb-8 md:mb-12">
+        <h2
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 md:mb-12"
+          style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}
+        >
           {t('projectsTitle')}
         </h2>
 
@@ -72,7 +80,10 @@ export default function Projects() {
               </div>
 
               <div className="p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-black dark:text-white mb-2 group-hover:text-red-500 transition-colors">
+                <h3
+                  className="text-lg sm:text-xl font-bold mb-2 group-hover:text-red-500 transition-colors"
+                  style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}
+                >
                   {project.title}
                 </h3>
                 <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-3 line-clamp-2">
