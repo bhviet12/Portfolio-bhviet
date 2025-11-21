@@ -45,6 +45,7 @@ const translations = {
     goal2: 'Nắm vững các công nghệ Cloud (AWS/Azure)',
     goal3: 'Đóng góp cho các dự án Open Source lớn',
     goal4: 'Xây dựng sản phẩm công nghệ có ích cho cộng đồng',
+    downloadCV: 'Tải CV',
 
     // Skills Section
     skillsTitle: 'Kỹ năng',
@@ -95,6 +96,7 @@ const translations = {
     goal2: 'Master Cloud technologies (AWS/Azure)',
     goal3: 'Contribute to large Open Source projects',
     goal4: 'Build technology products useful for the community',
+    downloadCV: 'Download CV',
 
     // Skills Section
     skillsTitle: 'Skills',

@@ -63,7 +63,7 @@ export default function About() {
               data-aos="fade-right"
               data-aos-duration="1000"
             >
-              <h3 className="text-xl sm:text-2xl font-bold text-red-500 mb-6 sm:mb-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-red-500 mb-6">
                 {t('personalInfo')}
               </h3>
               <div className="space-y-3 sm:space-y-4">
@@ -124,7 +124,7 @@ export default function About() {
               data-aos="fade-left"
               data-aos-duration="1000"
             >
-              <h3 className="text-xl sm:text-2xl font-bold text-red-500 mb-6 sm:mb-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-red-500 mb-6">
                 {t('futureGoals')}
               </h3>
               <ul className="space-y-2 sm:space-y-3">
@@ -139,6 +139,29 @@ export default function About() {
                 ))}
               </ul>
             </div>
+          </div>
+
+          {/* Download CV Button - Outside both boxes */}
+          <div className="mt-12 flex justify-center">
+            <a
+              href="/CV.pdf"
+              download="Bui_Hoang_Viet_CV.pdf"
+              className="btn-primary inline-flex items-center gap-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              {t('downloadCV')}
+            </a>
           </div>
         </div>
       </div>
