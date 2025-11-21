@@ -4,25 +4,36 @@ import type { PersonalInfo } from '../types';
 import '../styles/layout.css';
 import '../styles/button.css';
 
-const personalInfo: PersonalInfo = {
-  name: 'Bui Hoang Viet',
+const personalInfoStatic: PersonalInfo = {
+  name: '',
   age: 22,
-  school: 'Đại học Kinh tế - Kỹ thuật Công nghiệp Hà Nội',
+  school: '',
   gpa: '2.9/4.0',
-  major: 'Công nghệ thông tin',
+  major: '',
   email: 'bhviet1510@gmail.com',
   phone: '+84 912687955',
-  goals: [
-    'Trở thành Full-stack Developer chuyên nghiệp',
-    'Nắm vững các công nghệ Cloud (AWS/Azure)',
-    'Đóng góp cho các dự án Open Source lớn',
-    'Xây dựng sản phẩm công nghệ có ích cho cộng đồng'
-  ]
+  goals: []
 };
 
 export default function About() {
   const { t } = useLanguage();
   const { theme } = useTheme();
+
+  const personalInfo = {
+    name: t('nameValue'),
+    age: personalInfoStatic.age,
+    school: t('schoolValue'),
+    gpa: personalInfoStatic.gpa,
+    major: t('majorValue'),
+    email: personalInfoStatic.email,
+    phone: personalInfoStatic.phone,
+    goals: [
+      t('goal1'),
+      t('goal2'),
+      t('goal3'),
+      t('goal4')
+    ]
+  };
 
   return (
     <section
@@ -45,61 +56,61 @@ export default function About() {
             style={{ backgroundColor: '#ef4444', marginBottom: '28px' }}
           />
 
-          <div className="w-full grid grid-cols-2 md:grid-cols-2 gap-6">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Box 1: Personal Information */}
             <div
               className="bg-white dark:bg-zinc-900 rounded-xl shadow-xl p-6 sm:p-8"
               data-aos="fade-right"
               data-aos-duration="1000"
             >
-              <h3 className="text-xl sm:text-2xl font-bold text-red-500 mb-4 sm:mb-6">
+              <h3 className="text-xl sm:text-2xl font-bold text-red-500 mb-6 sm:mb-8">
                 {t('personalInfo')}
               </h3>
               <div className="space-y-3 sm:space-y-4">
-                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                  <span className="text-red-500 font-semibold text-sm sm:text-base sm:min-w-[100px]">
+                <div className="flex items-center gap-2">
+                  <span className="text-red-500 font-semibold text-sm sm:text-base min-w-[100px]">
                     {t('name')}:
                   </span>
                   <span className="text-zinc-800 dark:text-zinc-200 text-sm sm:text-base break-words">{personalInfo.name}</span>
                 </div>
 
-                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                  <span className="text-red-500 font-semibold text-sm sm:text-base sm:min-w-[100px]">
+                <div className="flex items-center gap-2">
+                  <span className="text-red-500 font-semibold text-sm sm:text-base min-w-[100px]">
                     {t('age')}:
                   </span>
                   <span className="text-zinc-800 dark:text-zinc-200 text-sm sm:text-base">{personalInfo.age}</span>
                 </div>
 
-                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                  <span className="text-red-500 font-semibold text-sm sm:text-base sm:min-w-[100px]">
+                <div className="flex items-center gap-2">
+                  <span className="text-red-500 font-semibold text-sm sm:text-base min-w-[100px]">
                     {t('school')}:
                   </span>
                   <span className="text-zinc-800 dark:text-zinc-200 text-sm sm:text-base break-words">{personalInfo.school}</span>
                 </div>
 
-                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                  <span className="text-red-500 font-semibold text-sm sm:text-base sm:min-w-[100px]">
+                <div className="flex items-center gap-2">
+                  <span className="text-red-500 font-semibold text-sm sm:text-base min-w-[100px]">
                     {t('gpa')}:
                   </span>
                   <span className="text-zinc-800 dark:text-zinc-200 text-sm sm:text-base">{personalInfo.gpa}</span>
                 </div>
 
-                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                  <span className="text-red-500 font-semibold text-sm sm:text-base sm:min-w-[100px]">
+                <div className="flex items-center gap-2">
+                  <span className="text-red-500 font-semibold text-sm sm:text-base min-w-[100px]">
                     {t('major')}:
                   </span>
                   <span className="text-zinc-800 dark:text-zinc-200 text-sm sm:text-base break-words">{personalInfo.major}</span>
                 </div>
 
-                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                  <span className="text-red-500 font-semibold text-sm sm:text-base sm:min-w-[100px]">
+                <div className="flex items-center gap-2">
+                  <span className="text-red-500 font-semibold text-sm sm:text-base min-w-[100px]">
                     {t('email')}:
                   </span>
                   <span className="text-zinc-800 dark:text-zinc-200 text-sm sm:text-base break-words">{personalInfo.email}</span>
                 </div>
 
-                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                  <span className="text-red-500 font-semibold text-sm sm:text-base sm:min-w-[100px]">
+                <div className="flex items-center gap-2">
+                  <span className="text-red-500 font-semibold text-sm sm:text-base min-w-[100px]">
                     {t('phone')}:
                   </span>
                   <span className="text-zinc-800 dark:text-zinc-200 text-sm sm:text-base break-words">{personalInfo.phone}</span>
@@ -113,7 +124,7 @@ export default function About() {
               data-aos="fade-left"
               data-aos-duration="1000"
             >
-              <h3 className="text-xl sm:text-2xl font-bold text-red-500 mb-3 sm:mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-red-500 mb-6 sm:mb-8">
                 {t('futureGoals')}
               </h3>
               <ul className="space-y-2 sm:space-y-3">

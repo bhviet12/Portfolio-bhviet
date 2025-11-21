@@ -37,6 +37,15 @@ const translations = {
     phone: 'Số điện thoại',
     futureGoals: 'Mục tiêu phát triển trong 3 năm tới',
 
+    // Personal Info Values
+    nameValue: 'Bùi Hoàng Việt',
+    schoolValue: 'Đại học Kinh tế - Kỹ thuật Công nghiệp Hà Nội',
+    majorValue: 'Công nghệ thông tin',
+    goal1: 'Trở thành Full-stack Developer chuyên nghiệp',
+    goal2: 'Nắm vững các công nghệ Cloud (AWS/Azure)',
+    goal3: 'Đóng góp cho các dự án Open Source lớn',
+    goal4: 'Xây dựng sản phẩm công nghệ có ích cho cộng đồng',
+
     // Skills Section
     skillsTitle: 'Kỹ năng',
     frontendFrameworks: 'Frontend Frameworks',
@@ -77,6 +86,15 @@ const translations = {
     email: 'Email',
     phone: 'Phone',
     futureGoals: '3-Year Development Goals',
+
+    // Personal Info Values
+    nameValue: 'Bui Hoang Viet',
+    schoolValue: 'University of Economics and Technology - Hanoi',
+    majorValue: 'Information Technology',
+    goal1: 'Become a professional Full-stack Developer',
+    goal2: 'Master Cloud technologies (AWS/Azure)',
+    goal3: 'Contribute to large Open Source projects',
+    goal4: 'Build technology products useful for the community',
 
     // Skills Section
     skillsTitle: 'Skills',
