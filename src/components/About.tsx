@@ -5,13 +5,13 @@ import '../styles/layout.css';
 import '../styles/button.css';
 
 const personalInfo: PersonalInfo = {
-  name: 'Tên của bạn',
+  name: 'Bui Hoang Viet',
   age: 22,
-  school: 'Tên trường đại học',
-  gpa: '3.5/4.0',
+  school: 'Đại học Kinh tế - Kỹ thuật Công nghiệp Hà Nội',
+  gpa: '2.9/4.0',
   major: 'Công nghệ thông tin',
-  email: 'your.email@example.com',
-  phone: '+84 123 456 789',
+  email: 'bhviet1510@gmail.com',
+  phone: '+84 912687955',
   goals: [
     'Trở thành Full-stack Developer chuyên nghiệp',
     'Nắm vững các công nghệ Cloud (AWS/Azure)',
