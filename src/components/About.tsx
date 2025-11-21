@@ -1,6 +1,8 @@
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTheme } from '../contexts/ThemeContext';
 import type { PersonalInfo } from '../types';
+import '../styles/layout.css';
+import '../styles/button.css';
 
 const personalInfo: PersonalInfo = {
   name: 'Tên của bạn',
@@ -30,17 +32,23 @@ export default function About() {
         backgroundColor: theme === 'light' ? '#fafafa' : '#000000'
       }}
     >
-      <div className="container mx-auto px-4 max-w-7xl">
-        <h2
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 md:mb-12"
-          style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}
-        >
-          {t('aboutTitle')}
-        </h2>
+      <div className="containerest">
+        <div className="w-full flex flex-col items-center">
+          <h1
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-center"
+            style={{ color: theme === 'light' ? '#000000' : '#ffffff', marginBottom: '24px' }}
+          >
+            {t('aboutTitle')}
+          </h1>
+          <div
+            className="w-24 h-1"
+            style={{ backgroundColor: '#ef4444', marginBottom: '28px' }}
+          />
 
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white dark:bg-zinc-900 rounded-xl shadow-lg p-6 sm:p-8 md:p-12 border border-zinc-200 dark:border-zinc-700">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-6 md:mb-8">
+          <div className="w-full max-w-4xl space-y-6">
+            {/* Box 1: Personal Information */}
+            <div className="bg-white dark:bg-zinc-900 rounded-xl shadow-lg p-6 sm:p-8 md:p-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               <div className="space-y-3 sm:space-y-4">
                 <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                   <span className="text-red-500 font-semibold text-sm sm:text-base sm:min-w-[100px]">
@@ -94,8 +102,10 @@ export default function About() {
                 </div>
               </div>
             </div>
+            </div>
 
-            <div className="border-t border-zinc-200 dark:border-zinc-700 pt-6 sm:pt-8">
+            {/* Box 2: Future Goals */}
+            <div className="bg-white dark:bg-zinc-900 rounded-xl shadow-lg p-6 sm:p-8 md:p-12">
               <h3 className="text-xl sm:text-2xl font-bold text-red-500 mb-3 sm:mb-4">
                 {t('futureGoals')}
               </h3>
