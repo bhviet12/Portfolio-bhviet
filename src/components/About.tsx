@@ -45,10 +45,16 @@ export default function About() {
             style={{ backgroundColor: '#ef4444', marginBottom: '28px' }}
           />
 
-          <div className="w-full max-w-4xl space-y-6">
+          <div className="w-full grid grid-cols-2 md:grid-cols-2 gap-6">
             {/* Box 1: Personal Information */}
-            <div className="bg-white dark:bg-zinc-900 rounded-xl shadow-lg p-6 sm:p-8 md:p-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+            <div
+              className="bg-white dark:bg-zinc-900 rounded-xl shadow-xl p-6 sm:p-8"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <h3 className="text-xl sm:text-2xl font-bold text-red-500 mb-4 sm:mb-6">
+                {t('personalInfo')}
+              </h3>
               <div className="space-y-3 sm:space-y-4">
                 <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                   <span className="text-red-500 font-semibold text-sm sm:text-base sm:min-w-[100px]">
@@ -77,9 +83,7 @@ export default function About() {
                   </span>
                   <span className="text-zinc-800 dark:text-zinc-200 text-sm sm:text-base">{personalInfo.gpa}</span>
                 </div>
-              </div>
 
-              <div className="space-y-3 sm:space-y-4">
                 <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                   <span className="text-red-500 font-semibold text-sm sm:text-base sm:min-w-[100px]">
                     {t('major')}:
@@ -102,10 +106,13 @@ export default function About() {
                 </div>
               </div>
             </div>
-            </div>
 
             {/* Box 2: Future Goals */}
-            <div className="bg-white dark:bg-zinc-900 rounded-xl shadow-lg p-6 sm:p-8 md:p-12">
+            <div
+              className="bg-white dark:bg-zinc-900 rounded-xl shadow-xl p-6 sm:p-8"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
               <h3 className="text-xl sm:text-2xl font-bold text-red-500 mb-3 sm:mb-4">
                 {t('futureGoals')}
               </h3>

@@ -15,7 +15,7 @@ function App() {
     AOS.init({
       duration: 1000,
       once: false,
-      offset: 50,
+      offset: 100,
       easing: 'ease-in-out',
       mirror: true,
       anchorPlacement: 'top-bottom',

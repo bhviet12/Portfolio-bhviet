@@ -56,12 +56,14 @@ export default function Home() {
     >
       <div className="home-container">
           {/* Content - Left */}
-          <div className="home-content">
+          <div
+            className="home-content"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             <h1
               className="text-[48px] sm:text-[64px] md:text-[80px] lg:text-[96px] font-bold mb-[16px] leading-tight"
               style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}
-              data-aos="fade-right"
-              data-aos-duration="1000"
             >
               <div>{t('greeting')},</div>
               <div>I'm <span style={{ color: '#ef4444' }}>Bui Hoang Viet</span></div>
@@ -69,8 +71,6 @@ export default function Home() {
             <p
               className="text-[24px] sm:text-[28px] md:text-[32px] font-semibold mb-[16px]"
               style={{ color: theme === 'light' ? '#52525b' : '#a1a1aa' }}
-              data-aos="fade-right"
-              data-aos-duration="1200"
             >
               {t('intro')}
             </p>
@@ -78,8 +78,6 @@ export default function Home() {
             {/* Social Icons */}
             <div
               className="flex items-center gap-[16px] mb-[16px]"
-              data-aos="fade-up"
-              data-aos-duration="1000"
             >
               {socialLinks.map((link, index) => (
                 <a
@@ -106,8 +104,6 @@ export default function Home() {
             <button
               onClick={() => scrollToSection('contact')}
               className="btn-primary"
-              data-aos="fade-up"
-              data-aos-duration="1000"
             >
               {t('contactMe')}
             </button>
@@ -116,8 +112,8 @@ export default function Home() {
           {/* Profile Image - Right */}
           <div
             className="home-image-wrapper"
-            data-aos="zoom-in"
-            data-aos-duration="1200"
+            data-aos="fade-left"
+            data-aos-duration="1000"
           >
             <div className={`home-profile-image ${theme === 'dark' ? 'dark' : ''}`}>
               <img

@@ -27,6 +27,7 @@ const translations = {
 
     // About Section
     aboutTitle: 'Về tôi',
+    personalInfo: 'Thông tin cá nhân',
     name: 'Tên',
     age: 'Tuổi',
     school: 'Trường',
@@ -67,6 +68,7 @@ const translations = {
 
     // About Section
     aboutTitle: 'About Me',
+    personalInfo: 'Personal Information',
     name: 'Name',
     age: 'Age',
     school: 'School',
