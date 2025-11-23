@@ -8,7 +8,7 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 const personalInfoStatic: PersonalInfo = {
   name: '',
-  age: 22,
+  date: '15/10/2003',
   school: '',
   gpa: '2.9/4.0',
   major: '',
@@ -23,7 +23,7 @@ export default function About() {
 
   const personalInfo = {
     name: t('nameValue'),
-    age: personalInfoStatic.age,
+    date: personalInfoStatic.date,
     school: t('schoolValue'),
     gpa: personalInfoStatic.gpa,
     major: t('majorValue'),
@@ -66,58 +66,72 @@ export default function About() {
               className="bg-white dark:bg-zinc-900 rounded-xl shadow-xl p-6 sm:p-8"
               data-aos="fade-right"
               data-aos-duration="1000"
+              style={{
+                backgroundColor: theme === 'light' ? '#ffffff' : '#18181b',
+                transition: 'all 0.3s ease-in-out',
+                border: theme === 'light' ? '1px solid #e5e5e5' : '1px solid #3f3f46',
+                padding: '48px',
+                borderRadius: '24px'
+              }}
             >
               <h3 className="text-2xl sm:text-3xl font-bold" style={{ marginBottom: '40px', color: theme === 'light' ? '#000000' : '#ffffff' }}>
                 {t('personalInfo')}
               </h3>
-              <div className="space-y-3 sm:space-y-4">
+              <div className="space-y-5 sm:space-y-6">
                 <div className="flex items-center gap-4">
-                  <span className="text-red-500 font-semibold text-base sm:text-lg min-w-[100px]">
+                  <span className="text-red-500 font-semibold text-lg sm:text-xl min-w-[100px]"
+                  style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}>
                     {t('name')}:
                   </span>
-                  <span className="text-base sm:text-lg break-words" style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}>{personalInfo.name}</span>
+                  <span className="text-lg sm:text-xl break-words" style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}>{personalInfo.name}</span>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <span className="text-red-500 font-semibold text-base sm:text-lg min-w-[100px]">
-                    {t('age')}:
+                  <span className="text-red-500 font-semibold text-lg sm:text-xl min-w-[100px]"
+                  style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}>
+                    {t('dob')}:
                   </span>
-                  <span className="text-base sm:text-lg" style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}>{personalInfo.age}</span>
+                  <span className="text-lg sm:text-xl" style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}>{personalInfo.date}</span>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <span className="text-red-500 font-semibold text-base sm:text-lg min-w-[100px]">
+                  <span className="text-red-500 font-semibold text-lg sm:text-xl min-w-[100px]"
+                  style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}>
                     {t('school')}:
                   </span>
-                  <span className="text-base sm:text-lg break-words" style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}>{personalInfo.school}</span>
+                  <span className="text-lg sm:text-xl break-words" style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}>{personalInfo.school}</span>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <span className="text-red-500 font-semibold text-base sm:text-lg min-w-[100px]">
+                  <span className="text-red-500 font-semibold text-lg sm:text-xl min-w-[100px]"
+                  style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}>
                     {t('gpa')}:
                   </span>
-                  <span className="text-base sm:text-lg" style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}>{personalInfo.gpa}</span>
+                  <span className="text-lg sm:text-xl" style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}>{personalInfo.gpa}</span>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <span className="text-red-500 font-semibold text-base sm:text-lg min-w-[100px]">
+                  <span className="text-red-500 font-semibold text-lg sm:text-xl min-w-[100px]"
+                  style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}>
                     {t('major')}:
                   </span>
-                  <span className="text-base sm:text-lg break-words" style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}>{personalInfo.major}</span>
+                  <span className="text-lg sm:text-xl break-words" style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}>{personalInfo.major}</span>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <span className="text-red-500 font-semibold text-base sm:text-lg min-w-[100px]">
+                  <span className="text-red-500 font-semibold text-lg sm:text-xl min-w-[100px]"
+                  style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}>
                     {t('email')}:
                   </span>
-                  <span className="text-base sm:text-lg break-words" style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}>{personalInfo.email}</span>
+                  <span className="text-lg sm:text-xl break-words" style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}>{personalInfo.email}</span>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <span className="text-red-500 font-semibold text-base sm:text-lg min-w-[100px]">
+                  <span className="text-red-500 font-semibold text-lg sm:text-xl min-w-[100px]"
+                  style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}>
                     {t('phone')}:
                   </span>
-                  <span className="text-base sm:text-lg break-words" style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}>{personalInfo.phone}</span>
+                  <span className="text-lg sm:text-xl break-words" style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}>{personalInfo.phone}</span>
                 </div>
               </div>
             </div>
@@ -127,15 +141,22 @@ export default function About() {
               className="bg-white dark:bg-zinc-900 rounded-xl shadow-xl p-6 sm:p-8"
               data-aos="fade-left"
               data-aos-duration="1000"
+              style={{
+                backgroundColor: theme === 'light' ? '#ffffff' : '#18181b',
+                transition: 'all 0.3s ease-in-out',
+                border: theme === 'light' ? '1px solid #e5e5e5' : '1px solid #3f3f46',
+                padding: '48px',
+                borderRadius: '24px'
+              }}
             >
               <h3 className="text-2xl sm:text-3xl font-bold" style={{ marginBottom: '40px', color: theme === 'light' ? '#000000' : '#ffffff' }}>
                 {t('futureGoals')}
               </h3>
-              <ul className="space-y-2 sm:space-y-3">
+              <ul className="space-y-4 sm:space-y-5" style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}>
                 {personalInfo.goals.map((goal, index) => (
                   <li
                     key={index}
-                    className="flex items-start gap-4 text-base sm:text-lg"
+                    className="flex items-start gap-4 text-lg sm:text-xl"
                   >
                     <span className="text-red-500 mt-0.5 sm:mt-1 flex-shrink-0">▸</span>
                     <span className="break-words" style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}>{goal}</span>

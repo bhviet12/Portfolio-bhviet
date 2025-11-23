@@ -9,7 +9,7 @@ export interface Project {
 
 export interface PersonalInfo {
   name: string;
-  age: number;
+  date: string;
   school: string;
   gpa: string;
   major: string;
