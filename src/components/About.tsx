@@ -50,7 +50,7 @@ export default function About() {
           <h1
             className="text-4xl sm:text-5xl md:text-6xl font-bold text-center"
             style={{
-              color: theme === 'light' ? '#000000' : '#ffffff',
+              color: '#ef4444',
               marginBottom: '30px',
               borderBottom: '4px solid #ef4444',
               paddingBottom: '20px'
