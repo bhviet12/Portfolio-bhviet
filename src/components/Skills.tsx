@@ -50,18 +50,18 @@ export default function Skills() {
             </h1>
           </div>
 
-          <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="w-full grid grid-cols-4 md:grid-cols-4 gap-8">
             {skills.map((skillCategory, categoryIndex) => (
-              <div key={categoryIndex}>
+              <div key={categoryIndex} className="flex flex-col items-center">
                 <h3
-                  className="text-xl sm:text-2xl font-bold mb-6"
-                  style={{ color: '#ef4444' }}
+                  className="text-xl sm:text-2xl font-bold"
+                  style={{ color: '#ef4444', marginBottom: '16px' }}
                 >
                   {t(skillCategory.category)}
                 </h3>
                 <div className="space-y-6">
                   {skillCategory.items.map((skill, skillIndex) => (
-                    <div key={skillIndex}>
+                    <div key={skillIndex} className="flex flex-col items-center">
                       <div className="flex items-center">
                         <span
                           className="text-base sm:text-lg font-medium"
@@ -72,8 +72,9 @@ export default function Skills() {
                       </div>
                       <div
                         style={{
-                          borderBottom: '2px solid #ef4444',
-                          marginTop: '12px'
+                          borderBottom: '3px solid #ef4444',
+                          marginTop: '12px',
+                          width: '150px'
                         }}
                       />
                     </div>
