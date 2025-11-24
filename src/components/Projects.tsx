@@ -1,6 +1,7 @@
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTheme } from '../contexts/ThemeContext';
 import type { Project } from '../types';
+import '../styles/layout.css';
 
 const projects: Project[] = [
   {
@@ -49,61 +50,86 @@ export default function Projects() {
         backgroundColor: theme === 'light' ? '#fafafa' : '#000000'
       }}
     >
-      <div className="container mx-auto px-4 max-w-7xl">
-        <h2
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 md:mb-12"
-          style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}
-        >
-          {t('projectsTitle')}
-        </h2>
-
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {projects.map((project) => (
-            <a
-              key={project.id}
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative overflow-hidden rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 hover:border-red-500 dark:hover:border-red-500 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+      <div className="containerest">
+        <div className="w-full flex flex-col items-center">
+          <div style={{ textAlign: 'center', marginBottom: '80px' }}>
+            <h1
+              className="text-4xl sm:text-5xl md:text-6xl font-bold"
+              style={{
+                color: '#ef4444',
+                display: 'inline-block',
+                borderBottom: '4px solid #ef4444',
+                paddingBottom: '10px'
+              }}
             >
-              <div className="relative h-48 sm:h-56 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
-                  <span className="text-white font-bold text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    {t('viewProject')}
-                  </span>
-                </div>
-              </div>
+              {t('projectsTitle')}
+            </h1>
+          </div>
 
-              <div className="p-4 sm:p-6">
-                <h3
-                  className="text-lg sm:text-xl font-bold mb-2 group-hover:text-red-500 transition-colors"
-                  style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}
-                >
-                  {project.title}
-                </h3>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-3 line-clamp-2">
-                  {project.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="text-xs text-zinc-600 dark:text-zinc-400"
-                    >
-                      {tech}
-                      {index < project.technologies.length - 1 && ' •'}
+          <div className="w-full grid grid-cols-4 md:grid-cols-4" style={{ gap: '40px' }}>
+            {projects.map((project) => (
+              <a
+                key={project.id}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative overflow-hidden rounded-2xl"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                style={{
+                  backgroundColor: theme === 'light' ? '#ffffff' : '#18181b',
+                  transition: 'all 0.3s ease',
+                  textDecoration: 'none',
+                  border: `2px solid ${theme === 'light' ? '#e5e7eb' : '#27272a'}`,
+                  padding: '0',
+                  borderRadius: '16px'
+                }}
+              >
+                <div className="relative h-20 md:h-48 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
+                    <span className="text-white font-bold text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {t('viewProject')}
                     </span>
-                  ))}
+                  </div>
                 </div>
-              </div>
-            </a>
-          ))}
+
+                <div className="p-8">
+                  <h3
+                    className="text-xl md:text-2xl font-bold mb-3"
+                    style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}
+                  >
+                    {project.title}
+                  </h3>
+                  <p
+                    className="text-base mb-4"
+                    style={{ color: theme === 'light' ? '#6b7280' : '#9ca3af' }}
+                  >
+                    {project.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-3 py-1 text-sm font-medium rounded-full"
+                        style={{
+                          backgroundColor: theme === 'light' ? '#fee2e2' : '#7f1d1d',
+                          color: theme === 'light' ? '#991b1b' : '#fca5a5'
+                        }}
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -167,12 +167,17 @@ export default function About() {
           </div>
 
           {/* Download CV Button - Outside both boxes */}
-          <div className="flex justify-center" style={{ marginTop: '72px' }}>
+          <div
+            className="flex justify-center"
+            style={{ marginTop: '72px' }}
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
             <a
               href="/CV.pdf"
               download="Bui_Hoang_Viet_CV.pdf"
               className="btn-primary inline-flex items-center text-base font-semibold px-12 py-3 w-full"
-              style={{ gap: '16px' }}
+              style={{ gap: '16px', textDecoration: 'none' }}
             >
               <FontAwesomeIcon icon={faDownload} className="flex-shrink-0" />
               <span style={{ whiteSpace: 'nowrap' }}>{t('downloadCV')}</span>
