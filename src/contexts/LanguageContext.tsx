@@ -59,7 +59,7 @@ const translations = {
     viewProject: 'Xem dự án',
 
     // Contact Dialog
-    contactTitle: 'Liên hệ với tôi',
+    contactTitle: 'Liên hệ',
     close: 'Đóng',
   },
   en: {
@@ -110,7 +110,7 @@ const translations = {
     viewProject: 'View Project',
 
     // Contact Dialog
-    contactTitle: 'Contact Me',
+    contactTitle: 'Contact',
     close: 'Close',
   },
 };
