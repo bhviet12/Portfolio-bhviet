@@ -1,0 +1,27 @@
+/* Mobile: < 768px */
+.nav-menu-desktop {
+  display: none;
+}
+
+.nav-hamburger {
+  display: flex;
+}
+
+.nav-dropdown {
+  display: block;
+}
+
+/* Desktop: >= 768px */
+@media (min-width: 768px) {
+  .nav-menu-desktop {
+    display: flex;
+  }
+
+  .nav-hamburger {
+    display: none;
+  }
+
+  .nav-dropdown {
+    display: none;
+  }
+}
