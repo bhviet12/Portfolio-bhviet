@@ -66,7 +66,7 @@ export default function Projects() {
             </h1>
           </div>
 
-          <div className="w-full grid grid-cols-3 md:grid-cols-4" style={{ gap: '40px' }}>
+          <div className="projects-grid w-full grid grid-cols-4 md:grid-cols-4" style={{ gap: '40px' }}>
             {projects.map((project) => (
               <a
                 key={project.id}

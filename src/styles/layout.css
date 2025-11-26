@@ -59,5 +59,10 @@
   .skills-grid .text-lg {
     font-size: 0.95rem !important;
   }
+
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
 }
 
