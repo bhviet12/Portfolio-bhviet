@@ -49,9 +49,10 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center pt-20"
+      className="min-h-screen flex items-center justify-center"
       style={{
-        backgroundColor: theme === 'light' ? '#ffffff' : '#000000'
+        backgroundColor: theme === 'light' ? '#ffffff' : '#000000',
+        paddingTop: '120px'
       }}
     >
       <div className="home-container">
