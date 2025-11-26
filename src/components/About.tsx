@@ -1,5 +1,5 @@
 import { useLanguage } from '../contexts/LanguageContext';
-import { useTheme } from '../contexts/ThemeContext';
+import { useTheme } from '../hooks/useTheme';
 import type { PersonalInfo } from '../types';
 import '../styles/layout.css';
 import '../styles/button.css';

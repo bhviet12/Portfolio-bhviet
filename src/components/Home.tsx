@@ -1,5 +1,5 @@
 import { useLanguage } from '../contexts/LanguageContext';
-import { useTheme } from '../contexts/ThemeContext';
+import { useTheme } from '../hooks/useTheme';
 import bhvietImage from '../assets/bhviet.png';
 import './Home.css';
 

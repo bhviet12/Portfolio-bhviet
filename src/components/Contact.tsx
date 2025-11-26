@@ -1,5 +1,5 @@
 import { useLanguage } from '../contexts/LanguageContext';
-import { useTheme } from '../contexts/ThemeContext';
+import { useTheme } from '../hooks/useTheme';
 import '../styles/layout.css';
 
 export default function Contact() {
@@ -46,7 +46,7 @@ export default function Contact() {
     >
       <div className="containerest">
         <div className="w-full flex flex-col items-center">
-          <div style={{ marginBottom: '60px' }}>
+          <div style={{ marginBottom: '60px' }} data-aos="fade-up">
             <h1
               className="text-3xl sm:text-4xl md:text-5xl font-bold"
               style={{
@@ -65,11 +65,13 @@ export default function Contact() {
             className="contact-info-wrapper shadow-2xl"
             style={{
               backgroundColor: theme === 'light' ? '#ffffff' : '#18181b',
-              padding: '60px 80px',
+              padding: '60px 100px',
               border: theme === 'light' ? '1px solid #e5e5e5' : '1px solid #3f3f46',
               borderRadius: '24px',
               textAlign: 'center'
             }}
+            data-aos="fade-up"
+            data-aos-delay="200"
           >
             {/* Name */}
             <p className="font-bold" style={{ color: theme === 'light' ? '#000000' : '#ffffff', marginBottom: '16px', fontSize: '28px' }}>
@@ -78,13 +80,21 @@ export default function Contact() {
 
             {/* Contact Info */}
             <div style={{ marginBottom: '24px' }}>
-              <p style={{ marginBottom: '12px', fontSize: '20px', color: theme === 'light' ? '#52525b' : '#a1a1aa' }}>
-                <a href="mailto:bhviet1510@gmail.com" className="hover:text-red-500 transition-colors">
+              <p style={{ marginBottom: '12px', fontSize: '20px' }}>
+                <a
+                  href="mailto:bhviet1510@gmail.com"
+                  className="hover:text-red-500 transition-colors"
+                  style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}
+                >
                   bhviet1510@gmail.com
                 </a>
               </p>
-              <p style={{ fontSize: '20px', color: theme === 'light' ? '#52525b' : '#a1a1aa' }}>
-                <a href="tel:+84912687955" className="hover:text-red-500 transition-colors">
+              <p style={{ fontSize: '20px' }}>
+                <a
+                  href="tel:+84912687955"
+                  className="hover:text-red-500 transition-colors"
+                  style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}
+                >
                   +84 912687955
                 </a>
               </p>
@@ -98,7 +108,7 @@ export default function Contact() {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 rounded-full hover:bg-red-500 hover:text-white transition-all duration-300 hover:scale-110"
+                  className="p-5 rounded-full hover:bg-red-500 hover:text-white transition-all duration-300 hover:scale-110"
                   style={{
                     backgroundColor: theme === 'light' ? '#f4f4f5' : '#27272a',
                     color: theme === 'light' ? '#000000' : '#ffffff',

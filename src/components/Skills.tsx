@@ -1,5 +1,5 @@
 import { useLanguage } from '../contexts/LanguageContext';
-import { useTheme } from '../contexts/ThemeContext';
+import { useTheme } from '../hooks/useTheme';
 import type { Skill } from '../types';
 import '../styles/layout.css';
 import { FaReact, FaVuejs, FaBootstrap, FaJs, FaNodeJs, FaGitAlt, FaDocker, FaLinux, FaWindows } from 'react-icons/fa';

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useTheme } from '../contexts/ThemeContext';
+import { useTheme } from '../hooks/useTheme';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function Navigation() {

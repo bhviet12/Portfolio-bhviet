@@ -1,5 +1,5 @@
 import { useLanguage } from '../contexts/LanguageContext';
-import { useTheme } from '../contexts/ThemeContext';
+import { useTheme } from '../hooks/useTheme';
 import type { Project } from '../types';
 import '../styles/layout.css';
 
@@ -34,7 +34,7 @@ const projects: Project[] = [
     description: 'Ứng dụng dự báo thời tiết với API tích hợp',
     image: 'https://placehold.co/600x400/10B981/FFFFFF?text=Weather+App',
     link: 'https://github.com/yourusername/project4',
-    technologies: ['React', 'Tailwind CSS', 'OpenWeather API']
+    technologies: ['React', 'Tailwind CSS', 'MogoDB','Node.js']
   }
 ];
 
@@ -66,7 +66,7 @@ export default function Projects() {
             </h1>
           </div>
 
-          <div className="w-full grid grid-cols-4 md:grid-cols-4" style={{ gap: '40px' }}>
+          <div className="w-full grid grid-cols-3 md:grid-cols-4" style={{ gap: '40px' }}>
             {projects.map((project) => (
               <a
                 key={project.id}
@@ -98,21 +98,21 @@ export default function Projects() {
                   </div>
                 </div>
 
-                <div className="p-8">
+                <div className="" style={{padding :'18px'}}>
                   <h3
-                    className="text-xl md:text-2xl font-bold mb-3"
-                    style={{ color: theme === 'light' ? '#000000' : '#ffffff' }}
+                    className="text-xl md:text-2xl font-bold"
+                    style={{ color: theme === 'light' ? '#000000' : '#ffffff', marginBottom: '12px' }}
                   >
                     {project.title}
                   </h3>
                   <p
-                    className="text-base mb-4"
-                    style={{ color: theme === 'light' ? '#6b7280' : '#9ca3af' }}
+                    className="text-base"
+                    style={{ color: theme === 'light' ? '#6b7280' : '#9ca3af', marginBottom: '16px' }}
                   >
                     {project.description}
                   </p>
 
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap" style={{ gap: '12px' }}>
                     {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
