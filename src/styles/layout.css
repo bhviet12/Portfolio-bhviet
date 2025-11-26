@@ -42,5 +42,22 @@
   .about-box {
     max-width: 100%;
   }
+
+  .skills-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px !important;
+  }
+
+  .skills-grid > div {
+    font-size: 0.9rem;
+  }
+
+  .skills-grid h3 {
+    font-size: 1.1rem !important;
+  }
+
+  .skills-grid .text-lg {
+    font-size: 0.95rem !important;
+  }
 }
 

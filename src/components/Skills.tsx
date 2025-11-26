@@ -74,7 +74,7 @@ export default function Skills() {
             </h1>
           </div>
 
-          <div className="w-full grid grid-cols-4 md:grid-cols-4 gap-8">
+          <div className="skills-grid w-full grid grid-cols-4 md:grid-cols-4 gap-8">
             {skills.map((skillCategory, categoryIndex) => (
               <div
                 key={categoryIndex}
