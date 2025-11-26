@@ -60,10 +60,10 @@ export default function About() {
           </h1>
           <div style={{ marginBottom: '58px' }} />
 
-          <div className="w-full grid grid-cols-2 md:grid-cols-2 gap-12 justify-items-center">
+          <div className="about-grid w-full">
             {/* Box 1: Personal Information */}
             <div
-              className="bg-white dark:bg-zinc-900 rounded-xl shadow-xl p-6 sm:p-8"
+              className="about-box bg-white dark:bg-zinc-900 rounded-xl shadow-xl p-6 sm:p-8"
               data-aos="fade-right"
               data-aos-duration="1000"
               style={{
@@ -138,7 +138,7 @@ export default function About() {
 
             {/* Box 2: Future Goals */}
             <div
-              className="bg-white dark:bg-zinc-900 rounded-xl shadow-xl p-6 sm:p-8"
+              className="about-box bg-white dark:bg-zinc-900 rounded-xl shadow-xl p-6 sm:p-8"
               data-aos="fade-left"
               data-aos-duration="1000"
               style={{
