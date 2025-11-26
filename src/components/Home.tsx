@@ -77,7 +77,7 @@ export default function Home() {
 
             {/* Social Icons */}
             <div
-              className="flex items-center gap-[16px] mb-[16px]"
+              className="social-icons-container flex items-center gap-[16px] mb-[16px]"
             >
               {socialLinks.map((link, index) => (
                 <a

@@ -62,6 +62,17 @@
     width: 320px;
     height: 320px;
   }
+
+  .social-icons-container {
+    justify-content: center !important;
+  }
+}
+
+/* Desktop: > 768px */
+@media (min-width: 769px) {
+  .social-icons-container {
+    justify-content: flex-start !important;
+  }
 }
 
 /* Button Styles - Reusable */
