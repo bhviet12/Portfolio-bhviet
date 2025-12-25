@@ -22,11 +22,11 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: 'Social Media Dashboard',
-    description: 'Dashboard phân tích mạng xã hội với biểu đồ real-time',
-    image: 'https://placehold.co/600x400/8B5CF6/FFFFFF?text=Dashboard',
-    link: 'https://github.com/yourusername/project3',
-    technologies: ['Next.js', 'TypeScript', 'Chart.js']
+    title: 'Real-time Crypto Analytics',
+    description: 'Nền tảng phân tích cryptocurrency real-time với biểu đồ kỹ thuật chuyên nghiệp',
+    image: '/crypto-chart.png',
+    link: 'https://chart-blockchainblockchain.vercel.app/',
+    technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Lightweight Charts', 'Axios']
   },
   {
     id: 4,

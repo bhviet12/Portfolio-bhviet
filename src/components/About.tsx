@@ -10,7 +10,7 @@ const personalInfoStatic: PersonalInfo = {
   name: '',
   date: '15/10/2003',
   school: '',
-  gpa: '2.9/4.0',
+  gpa: '3.1/4.0',
   major: '',
   email: 'bhviet1510@gmail.com',
   phone: '+84 912687955',
