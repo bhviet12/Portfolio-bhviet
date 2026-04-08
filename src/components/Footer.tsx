@@ -1,27 +1,26 @@
-import { useTheme } from '../hooks/useTheme';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Footer() {
-  const { theme } = useTheme();
+  const { t } = useLanguage();
 
   return (
-    <footer
-      style={{
-        backgroundColor: theme === 'light' ? '#000000' : '#ffffff',
-        borderTop: `1px solid ${theme === 'light' ? '#3f3f46' : '#e5e5e5'}`,
-        padding: '32px 0',
-        textAlign: 'center'
-      }}
-    >
-      <div className="container mx-auto px-4">
-        <p
-          style={{
-            fontSize: '16px',
-            color: theme === 'light' ? '#ffffff' : '#000000',
-            margin: 0
-          }}
+    <footer className="bg-white dark:bg-black border-t-4 border-black dark:border-white py-6 px-6 md:px-10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] tracking-[0.2em] font-black uppercase">
+      <div className="text-black dark:text-white">{t('footer_copyright')}</div>
+      <div className="flex gap-6">
+        <a
+          className="text-black dark:text-white hover:text-[#E31B23] dark:hover:text-[#E31B23] transition-colors"
+          href="https://github.com/bhviet12"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          @2025 copyright
-        </p>
+          {t('footer_github')}
+        </a>
+        <a
+          className="text-black dark:text-white hover:text-[#E31B23] dark:hover:text-[#E31B23] transition-colors"
+          href="#"
+        >
+          {t('footer_linkedin')}
+        </a>
       </div>
     </footer>
   );

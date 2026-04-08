@@ -1,12 +1,13 @@
 import { useEffect } from 'react';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { LanguageProvider } from './contexts/LanguageContext';
-import Navigation from './components/Navigation';
-import Home from './components/Home';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import Navbar from './components/Navbar';
+import HeroSection from './components/HeroSection';
+import AboutSection from './components/AboutSection';
+import ExperienceSection from './components/ExperienceSection';
+import SkillSection from './components/SkillSection';
+import ProjectSection from './components/ProjectSection';
+import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -14,30 +15,25 @@ import 'aos/dist/aos.css';
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
-      once: false,
-      offset: 100,
-      easing: 'ease-in-out',
-      mirror: true,
-      anchorPlacement: 'top-bottom',
-      disable: false,
-      startEvent: 'DOMContentLoaded',
+      duration: 600,
+      easing: 'ease-out',
+      once: true,
+      offset: 80,
     });
-
-    // Refresh AOS to ensure it detects all elements
     AOS.refresh();
   }, []);
 
   return (
     <ThemeProvider>
       <LanguageProvider>
-        <div>
-          <Navigation />
-          <Home />
-          <About />
-          <Skills />
-          <Projects />
-          <Contact />
+        <div className="min-h-screen bg-white dark:bg-[#0a0a0a] transition-colors duration-300">
+          <Navbar />
+          <HeroSection />
+          <AboutSection />
+          <ExperienceSection />
+          <SkillSection />
+          <ProjectSection />
+          <ContactSection />
           <Footer />
         </div>
       </LanguageProvider>

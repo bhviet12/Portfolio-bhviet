@@ -2,13 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Base Brutalist Reset ── */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #111827 #f1f1f1;
+  border-radius: 0 !important;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Material Symbols ── */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1em;
+  line-height: 1;
+}
+
+/* ── Brutalist Shadows ── */
+.shadow-brutal { box-shadow: 4px 4px 0px #000000; }
+.shadow-brutal-sm { box-shadow: 3px 3px 0px #000000; }
+.shadow-brutal-red { box-shadow: 4px 4px 0px #E31B23; }
+.shadow-brutal-hover:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0px #000000;
+}
+
+/* ── Arsenal Grid ── */
+.arsenal-grid-item {
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  transition: all 100ms;
+}
+.arsenal-grid-item:hover {
+  background-color: #E31B23;
+  color: #ffffff;
+}
+.arsenal-grid-item:hover .material-symbols-outlined {
+  color: #ffffff;
+}
+
+/* Dark mode Arsenal Grid */
+.dark .arsenal-grid-item {
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+
+/* ── Selection ── */
+::selection {
+  background-color: #E31B23;
+  color: #ffffff;
+}
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #000000; }
+::-webkit-scrollbar-thumb:hover { background: #E31B23; }
+
+.dark ::-webkit-scrollbar-track { background: #1a1a1a; }
+.dark ::-webkit-scrollbar-thumb { background: #ffffff; }
+.dark ::-webkit-scrollbar-thumb:hover { background: #E31B23; }
+
+/* ── Kinetic Hover ── */
+.kinetic-hover {
+  transition: transform 0.1s ease;
+}
+.kinetic-hover:hover {
+  transform: translate(-3px, -3px);
+}
+.kinetic-shadow {
+  box-shadow: 4px 4px 0px #000000;
+}
+.kinetic-shadow:hover {
+  box-shadow: 7px 7px 0px #000000;
+}
+.kinetic-shadow-brutal {
+  box-shadow: 6px 6px 0px #000000;
 }
