@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { useTheme } from '@/contexts/ThemeContext';
 
 export default function ContactSection() {
   const { t } = useLanguage();
+  const { isDark } = useTheme();
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -63,16 +66,24 @@ export default function ContactSection() {
             href="https://github.com/bhviet12"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-4 border-2 border-black dark:border-white hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all duration-100 font-black uppercase text-xs"
+            className={`flex items-center gap-2 px-6 py-4 border-2 border-black dark:border-white hover:bg-black dark:hover:bg-white transition-all duration-100 font-black uppercase text-xs ${
+              isDark
+                ? 'text-white hover:text-black'
+                : 'text-black hover:text-white'
+            }`}
           >
-            <i className="fab fa-github text-base"></i>
+            <FaGithub className="text-base" />
             {t('footer_github')}
           </a>
           <a
             href="#"
-            className="flex items-center gap-2 px-6 py-4 border-2 border-black dark:border-white hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all duration-100 font-black uppercase text-xs"
+            className={`flex items-center gap-2 px-6 py-4 border-2 border-black dark:border-white hover:bg-black dark:hover:bg-white transition-all duration-100 font-black uppercase text-xs ${
+              isDark
+                ? 'text-white hover:text-black'
+                : 'text-black hover:text-white'
+            }`}
           >
-            <i className="fab fa-linkedin text-base"></i>
+            <FaLinkedin className="text-base" />
             {t('footer_linkedin')}
           </a>
         </div>

@@ -2,30 +2,30 @@
 import type { SkillItem } from '../types';
 
 export const frontendStack: SkillItem[] = [
-  { name: 'React', icon: 'deployed_code', tag: 'UI_LIB' },
-  { name: 'Next.js', icon: 'bolt', tag: 'FRAMEWORK' },
-  { name: 'Tailwind', icon: 'palette', tag: 'STYLING' },
-  { name: 'TypeScript', icon: 'javascript', tag: 'LANGUAGE' },
+  { name: 'React', icon: 'deployed_code', tag: 'FRAMEWORK' },
   { name: 'Vue 3', icon: 'category', tag: 'FRAMEWORK' },
-  { name: 'Vite', icon: 'speed', tag: 'TOOLING' },
+  { name: 'Tailwind CSS', icon: 'palette', tag: 'FRAMEWORK' },
+  { name: 'Bootstrap', icon: 'grid_view', tag: 'FRAMEWORK' },
+  { name: 'TypeScript', icon: 'javascript', tag: 'LANGUAGE' },
+  { name: 'HTML / CSS', icon: 'code', tag: 'LANGUAGE' },
 ];
 
 export const backendStack: SkillItem[] = [
-  { name: 'Node.js', icon: 'settings_ethernet', tag: 'RUNTIME' },
-  { name: 'PostgreSQL', icon: 'storage', tag: 'DATABASE' },
-  { name: 'Redis', icon: 'database', tag: 'CACHE' },
-  { name: 'GraphQL', icon: 'api', tag: 'API' },
-  { name: 'REST API', icon: 'cloud', tag: 'API' },
-  { name: 'MongoDB', icon: 'dns', tag: 'DATABASE' },
+  { name: 'Java', icon: 'memory', tag: 'LANGUAGE' },
+  { name: 'PHP', icon: 'terminal', tag: 'LANGUAGE' },
+  { name: 'Node.js', icon: 'settings_ethernet', tag: 'LANGUAGE' },
+  { name: 'SpringBoot', icon: 'bolt', tag: 'FRAMEWORK' },
+  { name: 'Laravel', icon: 'code', tag: 'FRAMEWORK' },
+  { name: 'REST API', icon: 'cloud', tag: 'FRAMEWORK' },
 ];
 
 export const infraStack: SkillItem[] = [
-  { name: 'Docker', icon: 'terminal', tag: 'CONTAINER' },
-  { name: 'AWS', icon: 'cloud', tag: 'CLOUD' },
-  { name: 'Kubernetes', icon: 'hub', tag: 'ORCHESTRA' },
-  { name: 'GitHub', icon: 'code_blocks', tag: 'CI/CD' },
-  { name: 'Nginx', icon: 'lan', tag: 'REVERSE_PROXY' },
-  { name: 'Linux', icon: 'computer', tag: 'OS' },
+  { name: 'PostgreSQL', icon: 'storage', tag: 'DATABASE' },
+  { name: 'MySQL', icon: 'dns', tag: 'DATABASE' },
+  { name: 'MongoDB', icon: 'database', tag: 'DATABASE' },
+  { name: 'Docker', icon: 'widgets', tag: 'TOOLS' },
+  { name: 'GitHub', icon: 'code_blocks', tag: 'TOOLS' },
+  { name: 'Ubuntu / Windows', icon: 'computer', tag: 'TOOLS' },
 ];
 
 export const projects = [

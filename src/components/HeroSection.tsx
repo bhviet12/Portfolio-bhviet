@@ -43,10 +43,11 @@ export default function HeroSection() {
               {t('hero_btnProject')}
             </a>
             <a
-              href="#skills"
+              href="/CV-BuiHoangViet.pdf"
+              download
               className="px-8 py-4 border-4 border-black dark:border-white text-black dark:text-white font-black uppercase text-xs hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-colors duration-100"
             >
-              {t('hero_btnArsenal')}
+              TẢI CV
             </a>
           </div>
         </div>

@@ -2,10 +2,10 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { frontendStack, backendStack, infraStack } from '@/data/content';
 import {
   MdWeb, MdBolt, MdPalette, MdMemory, MdStorage, MdCached,
-  MdApi, MdCloud, MdHub, MdWidgets, MdDns, MdLan, MdComputer,
-  MdCode, MdSpeed, MdCategory,
+  MdApi, MdWidgets, MdDns, MdComputer,
+  MdCode, MdCategory, MdGridView,
 } from 'react-icons/md';
-import { FaJs, FaTerminal, FaCode } from 'react-icons/fa';
+import { FaJs, FaCode } from 'react-icons/fa';
 
 const iconMap: Record<string, React.ReactNode> = {
   deployed_code: <MdWeb />,
@@ -13,7 +13,6 @@ const iconMap: Record<string, React.ReactNode> = {
   palette: <MdPalette />,
   javascript: <FaJs />,
   code: <MdCode />,
-  speed: <MdSpeed />,
   category: <MdCategory />,
   memory: <MdMemory />,
   settings_ethernet: <MdMemory />,
@@ -21,21 +20,20 @@ const iconMap: Record<string, React.ReactNode> = {
   database: <MdCached />,
   cached: <MdCached />,
   api: <MdApi />,
-  terminal: <FaTerminal />,
-  cloud: <MdCloud />,
-  hub: <MdHub />,
+  terminal: <FaCode />,
+  cloud: <MdApi />,
   widgets: <MdWidgets />,
   code_blocks: <FaCode />,
-  lan: <MdLan />,
   computer: <MdComputer />,
   dns: <MdDns />,
+  grid_view: <MdGridView />,
 };
 
 const columns = [
   { labelKey: 'skill_fe' as const, items: frontendStack },
   { labelKey: 'skill_be' as const, items: backendStack },
-  { labelKey: 'skill_infra' as const, items: infraStack },
-];
+  { labelKey: 'skill_data' as const, items: infraStack },
+] as const;
 
 export default function SkillSection() {
   const { t } = useLanguage();

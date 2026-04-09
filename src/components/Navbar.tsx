@@ -46,7 +46,7 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 w-full z-50 border-b-2 border-black dark:border-white bg-white/90 dark:bg-[#0a0a0a]/90 backdrop-blur-md flex justify-between items-center px-6 py-4 font-body uppercase tracking-[0.1em]">
       {/* Logo */}
       <div className="text-xl md:text-2xl font-black text-black dark:text-white tracking-[-0.04em] select-none cursor-pointer">
-        DEV_<span className="text-[#E31B23]">MONOLITH</span>
+        Portfolio-<span className="text-[#E31B23]">VIET</span>
       </div>
 
       {/* Desktop Nav */}
@@ -75,16 +75,26 @@ export default function Navbar() {
         <button
           onClick={toggleTheme}
           aria-label={isDark ? 'Light mode' : 'Dark mode'}
-          className="flex items-center justify-center w-9 h-9 border-2 border-black dark:border-white hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all duration-100"
+          className={`flex items-center justify-center w-9 h-9 border-2 hover:border-black transition-all duration-100 ${
+            isDark
+              ? 'border-white hover:bg-white text-white hover:text-black'
+              : 'border-black hover:bg-black text-black hover:text-white'
+          }`}
         >
-          {isDark ? <MdLightMode className="text-base" /> : <MdDarkMode className="text-base" />}
+          {isDark
+            ? <MdLightMode className="text-base" />
+            : <MdDarkMode className="text-base" />}
         </button>
 
         {/* Lang Toggle */}
         <button
           onClick={() => setLang(lang === 'vi' ? 'en' : 'vi')}
           aria-label="Toggle language"
-          className="flex items-center gap-1 px-2 py-1 border-2 border-black dark:border-white text-[10px] font-black tracking-widest text-black dark:text-white hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all duration-100 uppercase"
+          className={`flex items-center gap-1 px-2 py-1 border-2 text-[10px] font-black tracking-widest uppercase transition-all duration-100 ${
+            isDark
+              ? 'border-white text-white hover:bg-white hover:text-black'
+              : 'border-black text-black hover:bg-black hover:text-white'
+          }`}
         >
           <MdLanguage className="text-sm" />
           {lang === 'vi' ? 'EN' : 'VI'}
@@ -93,7 +103,11 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden flex items-center justify-center w-9 h-9 border-2 border-black dark:border-white text-black dark:text-white hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all duration-100"
+          className={`md:hidden flex items-center justify-center w-9 h-9 border-2 transition-all duration-100 ${
+            isDark
+              ? 'border-white text-white hover:bg-white hover:text-black'
+              : 'border-black text-black hover:bg-black hover:text-white'
+          }`}
         >
           {isMenuOpen ? <MdClose className="text-base" /> : <MdMenu className="text-base" />}
         </button>
