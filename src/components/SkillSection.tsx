@@ -1,11 +1,12 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { frontendStack, backendStack, infraStack } from '@/data/content';
+import { frontendStack, backendStack, uiLibrariesStack, toolsStack } from '@/data/content';
 import {
   MdWeb, MdBolt, MdPalette, MdMemory, MdStorage, MdCached,
   MdApi, MdWidgets, MdDns, MdComputer,
-  MdCode, MdCategory, MdGridView,
+  MdCode, MdCategory, MdGridView, MdDashboard, MdTask, MdSend,
+  MdViewColumn, MdDesignServices,
 } from 'react-icons/md';
-import { FaJs, FaCode } from 'react-icons/fa';
+import { FaJs, FaGitAlt } from 'react-icons/fa';
 
 const iconMap: Record<string, React.ReactNode> = {
   deployed_code: <MdWeb />,
@@ -20,19 +21,26 @@ const iconMap: Record<string, React.ReactNode> = {
   database: <MdCached />,
   cached: <MdCached />,
   api: <MdApi />,
-  terminal: <FaCode />,
+  terminal: <MdCode />,
   cloud: <MdApi />,
   widgets: <MdWidgets />,
-  code_blocks: <FaCode />,
+  code_blocks: <MdCode />,
   computer: <MdComputer />,
   dns: <MdDns />,
   grid_view: <MdGridView />,
+  dashboard: <MdDashboard />,
+  task: <MdTask />,
+  send: <MdSend />,
+  view_column: <MdViewColumn />,
+  design_services: <MdDesignServices />,
+  git: <FaGitAlt />,
 };
 
 const columns = [
   { labelKey: 'skill_fe' as const, items: frontendStack },
   { labelKey: 'skill_be' as const, items: backendStack },
-  { labelKey: 'skill_data' as const, items: infraStack },
+  { labelKey: 'skill_ui' as const, items: uiLibrariesStack },
+  { labelKey: 'skill_tools' as const, items: toolsStack },
 ] as const;
 
 export default function SkillSection() {
@@ -52,7 +60,7 @@ export default function SkillSection() {
         </div>
 
         {/* Arsenal Grid: 3 columns */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {columns.map((col) => (
             <div key={col.labelKey} className="border-t-4 border-black dark:border-white">
               {/* Column header */}
@@ -60,7 +68,7 @@ export default function SkillSection() {
                 {t(col.labelKey)}
               </div>
 
-              {/* Arsenal Grid */}
+              {/* Skills Grid */}
               <div className="grid grid-cols-2 border-l-2 border-black border-t-2 dark:border-white">
                 {col.items.map((tech) => (
                   <div

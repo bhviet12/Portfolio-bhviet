@@ -4,28 +4,30 @@ import type { SkillItem } from '../types';
 export const frontendStack: SkillItem[] = [
   { name: 'React', icon: 'deployed_code', tag: 'FRAMEWORK' },
   { name: 'Vue 3', icon: 'category', tag: 'FRAMEWORK' },
-  { name: 'Tailwind CSS', icon: 'palette', tag: 'FRAMEWORK' },
-  { name: 'Bootstrap', icon: 'grid_view', tag: 'FRAMEWORK' },
   { name: 'TypeScript', icon: 'javascript', tag: 'LANGUAGE' },
   { name: 'HTML / CSS', icon: 'code', tag: 'LANGUAGE' },
 ];
 
 export const backendStack: SkillItem[] = [
-  { name: 'Java', icon: 'memory', tag: 'LANGUAGE' },
-  { name: 'PHP', icon: 'terminal', tag: 'LANGUAGE' },
-  { name: 'Node.js', icon: 'settings_ethernet', tag: 'LANGUAGE' },
-  { name: 'SpringBoot', icon: 'bolt', tag: 'FRAMEWORK' },
+  { name: 'Node.js', icon: 'memory', tag: 'LANGUAGE' },
   { name: 'Laravel', icon: 'code', tag: 'FRAMEWORK' },
-  { name: 'REST API', icon: 'cloud', tag: 'FRAMEWORK' },
+  { name: 'PostgreSQL', icon: 'storage', tag: 'DATABASE' },
+  { name: 'MongoDB', icon: 'database', tag: 'DATABASE' },
 ];
 
-export const infraStack: SkillItem[] = [
-  { name: 'PostgreSQL', icon: 'storage', tag: 'DATABASE' },
-  { name: 'MySQL', icon: 'dns', tag: 'DATABASE' },
-  { name: 'MongoDB', icon: 'database', tag: 'DATABASE' },
-  { name: 'Docker', icon: 'widgets', tag: 'TOOLS' },
-  { name: 'GitHub', icon: 'code_blocks', tag: 'TOOLS' },
-  { name: 'Ubuntu / Windows', icon: 'computer', tag: 'TOOLS' },
+export const uiLibrariesStack: SkillItem[] = [
+  { name: 'Bootstrap', icon: 'grid_view', tag: 'UI_LIB' },
+  { name: 'Tailwind CSS', icon: 'palette', tag: 'UI_LIB' },
+  { name: 'Ant Design', icon: 'dashboard', tag: 'UI_LIB' },
+];
+
+export const toolsStack: SkillItem[] = [
+  { name: 'Git', icon: 'git', tag: 'TOOLS' },
+  { name: 'Jira', icon: 'task', tag: 'TOOLS' },
+  { name: 'Trello', icon: 'view_column', tag: 'TOOLS' },
+  { name: 'Postman', icon: 'send', tag: 'TOOLS' },
+  { name: 'Figma', icon: 'design_services', tag: 'TOOLS' },
+  { name: 'Linux / Windows', icon: 'computer', tag: 'OS' },
 ];
 
 export const projects = [
