@@ -1,30 +1,56 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { frontendStack, backendStack, infraStack } from '@/data/content';
+import {
+  MdWeb, MdBolt, MdPalette, MdMemory, MdStorage, MdCached,
+  MdApi, MdCloud, MdHub, MdWidgets, MdDns, MdLan, MdComputer,
+  MdCode, MdSpeed, MdCategory,
+} from 'react-icons/md';
+import { FaJs, FaTerminal, FaCode } from 'react-icons/fa';
+
+const iconMap: Record<string, React.ReactNode> = {
+  deployed_code: <MdWeb />,
+  bolt: <MdBolt />,
+  palette: <MdPalette />,
+  javascript: <FaJs />,
+  code: <MdCode />,
+  speed: <MdSpeed />,
+  category: <MdCategory />,
+  memory: <MdMemory />,
+  settings_ethernet: <MdMemory />,
+  storage: <MdStorage />,
+  database: <MdCached />,
+  cached: <MdCached />,
+  api: <MdApi />,
+  terminal: <FaTerminal />,
+  cloud: <MdCloud />,
+  hub: <MdHub />,
+  widgets: <MdWidgets />,
+  code_blocks: <FaCode />,
+  lan: <MdLan />,
+  computer: <MdComputer />,
+  dns: <MdDns />,
+};
+
+const columns = [
+  { labelKey: 'skill_fe' as const, items: frontendStack },
+  { labelKey: 'skill_be' as const, items: backendStack },
+  { labelKey: 'skill_infra' as const, items: infraStack },
+];
 
 export default function SkillSection() {
   const { t } = useLanguage();
 
-  const columns = [
-    { labelKey: 'skill_fe' as const, items: frontendStack },
-    { labelKey: 'skill_be' as const, items: backendStack },
-    { labelKey: 'skill_infra' as const, items: infraStack },
-  ];
-
   return (
-    <section
-      id="skills"
-      className="py-20 px-6 md:px-10 bg-white dark:bg-[#0a0a0a] border-b-2 border-black dark:border-white"
-    >
+    <section id="skills" className="py-20 px-6 md:px-10 bg-white dark:bg-[#0a0a0a] border-b-2 border-black dark:border-white font-body">
       <div className="max-w-6xl mx-auto">
+
         {/* Section Header */}
         <div className="flex items-baseline gap-4 mb-12">
           <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-black dark:text-white">
             {t('skill_title')}
           </h2>
           <div className="h-[4px] flex-1 bg-black dark:bg-white" />
-          <div className="text-[10px] font-mono text-[#E31B23] hidden sm:block">
-            {/* sys.get_capabilities() */}
-          </div>
+          <div className="text-[10px] font-mono text-[#E31B23] hidden sm:block">/* sys.get_capabilities() */</div>
         </div>
 
         {/* Arsenal Grid: 3 columns */}
@@ -37,14 +63,14 @@ export default function SkillSection() {
               </div>
 
               {/* Arsenal Grid */}
-              <div className="grid grid-cols-2 border-l-2 border-black dark:border-white border-t-2 dark:border-white">
+              <div className="grid grid-cols-2 border-l-2 border-black border-t-2 dark:border-white">
                 {col.items.map((tech) => (
                   <div
                     key={tech.name}
                     className="arsenal-grid-item p-4 group cursor-default"
                   >
-                    <span className="material-symbols-outlined text-xl text-[#E31B23] mb-2 block">
-                      {tech.icon}
+                    <span className="text-xl text-[#E31B23] mb-2 block">
+                      {iconMap[tech.icon] ?? <MdCode />}
                     </span>
                     <div className="text-xs font-black uppercase text-black dark:text-white group-hover:text-white">
                       {tech.name}
@@ -58,6 +84,7 @@ export default function SkillSection() {
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

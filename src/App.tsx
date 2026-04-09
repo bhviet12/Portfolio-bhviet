@@ -4,8 +4,8 @@ import { LanguageProvider } from './contexts/LanguageContext';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
-import ExperienceSection from './components/ExperienceSection';
 import SkillSection from './components/SkillSection';
+import ExperienceSection from './components/ExperienceSection';
 import ProjectSection from './components/ProjectSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
@@ -30,8 +30,8 @@ function App() {
           <Navbar />
           <HeroSection />
           <AboutSection />
-          <ExperienceSection />
           <SkillSection />
+          <ExperienceSection />
           <ProjectSection />
           <ContactSection />
           <Footer />

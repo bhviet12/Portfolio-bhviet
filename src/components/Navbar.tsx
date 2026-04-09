@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from '@/contexts/ThemeContext';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { MdDarkMode, MdLightMode, MdLanguage, MdMenu, MdClose } from 'react-icons/md';
 
 const SECTION_IDS = ['home', 'about', 'experience', 'skills', 'projects', 'contact'] as const;
 
@@ -42,7 +43,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 border-b-2 border-black dark:border-white bg-white/90 dark:bg-[#0a0a0a]/90 backdrop-blur-md flex justify-between items-center px-6 py-4 uppercase tracking-[0.1em]">
+    <header className="fixed top-0 left-0 w-full z-50 border-b-2 border-black dark:border-white bg-white/90 dark:bg-[#0a0a0a]/90 backdrop-blur-md flex justify-between items-center px-6 py-4 font-body uppercase tracking-[0.1em]">
       {/* Logo */}
       <div className="text-xl md:text-2xl font-black text-black dark:text-white tracking-[-0.04em] select-none cursor-pointer">
         DEV_<span className="text-[#E31B23]">MONOLITH</span>
@@ -76,16 +77,16 @@ export default function Navbar() {
           aria-label={isDark ? 'Light mode' : 'Dark mode'}
           className="flex items-center justify-center w-9 h-9 border-2 border-black dark:border-white hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all duration-100"
         >
-          <span className="material-symbols-outlined text-base">
-            {isDark ? 'light_mode' : 'dark_mode'}
-          </span>
+          {isDark ? <MdLightMode className="text-base" /> : <MdDarkMode className="text-base" />}
         </button>
 
         {/* Lang Toggle */}
         <button
           onClick={() => setLang(lang === 'vi' ? 'en' : 'vi')}
-          className="px-3 py-1 border-2 border-black dark:border-white text-[10px] font-black tracking-widest text-black dark:text-white hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all duration-100 uppercase"
+          aria-label="Toggle language"
+          className="flex items-center gap-1 px-2 py-1 border-2 border-black dark:border-white text-[10px] font-black tracking-widest text-black dark:text-white hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all duration-100 uppercase"
         >
+          <MdLanguage className="text-sm" />
           {lang === 'vi' ? 'EN' : 'VI'}
         </button>
 
@@ -94,9 +95,7 @@ export default function Navbar() {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="md:hidden flex items-center justify-center w-9 h-9 border-2 border-black dark:border-white text-black dark:text-white hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all duration-100"
         >
-          <span className="material-symbols-outlined text-base">
-            {isMenuOpen ? 'close' : 'menu'}
-          </span>
+          {isMenuOpen ? <MdClose className="text-base" /> : <MdMenu className="text-base" />}
         </button>
       </div>
 

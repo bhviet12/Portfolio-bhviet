@@ -17,10 +17,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section
-      id="contact"
-      className="py-20 px-6 md:px-10 bg-white dark:bg-[#0a0a0a] border-t-2 border-black dark:border-white"
-    >
+    <section id="contact" className="py-20 px-6 md:px-10 bg-white dark:bg-[#0a0a0a] border-t-2 border-black dark:border-white font-body">
       <div className="max-w-4xl mx-auto text-center">
 
         {/* Label */}
@@ -52,10 +49,10 @@ export default function ContactSection() {
               {t('contact_phoneLabel')}
             </div>
             <a
-              href="tel:0912687955"
+              href="tel:+84912687955"
               className="text-lg md:text-xl font-black text-black dark:text-white hover:text-[#E31B23] transition-colors"
             >
-              0912687955
+              +84 (0) 912 687 955
             </a>
           </div>
         </div>
@@ -69,14 +66,14 @@ export default function ContactSection() {
             className="flex items-center gap-2 px-6 py-4 border-2 border-black dark:border-white hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all duration-100 font-black uppercase text-xs"
           >
             <i className="fab fa-github text-base"></i>
-            GITHUB
+            {t('footer_github')}
           </a>
           <a
             href="#"
             className="flex items-center gap-2 px-6 py-4 border-2 border-black dark:border-white hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all duration-100 font-black uppercase text-xs"
           >
             <i className="fab fa-linkedin text-base"></i>
-            LINKEDIN
+            {t('footer_linkedin')}
           </a>
         </div>
 
