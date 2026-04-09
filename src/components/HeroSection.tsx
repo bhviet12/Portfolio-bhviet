@@ -57,7 +57,7 @@ export default function HeroSection() {
           {/* Portrait Image */}
           <div className="aspect-square border-4 border-black dark:border-white flex items-center justify-center relative overflow-hidden group kinetic-shadow-red max-w-[320px] sm:max-w-sm mx-auto lg:max-w-none lg:mx-0">
             <img
-              src="/src/assets/bhv.png"
+              src="/bhv.png"
               alt="Bùi Hoàng Việt"
               className="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 group-hover:contrast-100 transition-all duration-500 scale-110 group-hover:scale-100"
             />

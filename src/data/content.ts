@@ -37,7 +37,7 @@ export const projects = [
     descKey: 'proj_ecommerce_desc' as const,
     tagsKey: 'proj_ecommerce_tags' as const,
     isDeployed: true,
-    img: '/src/assets/bg1.png',
+    img: '/bg1.png',
   },
   {
     id: 'fitapp' as const,

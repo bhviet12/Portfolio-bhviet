@@ -42,7 +42,7 @@ export default function AboutSection() {
           <div className="lg:col-span-4 flex justify-center lg:justify-start" data-aos="fade-up">
             <div className="relative inline-block">
               <img
-                src="/src/assets/bhv.png"
+                src="/bhv.png"
                 alt="Bùi Hoàng Việt"
                 className="w-full max-w-xs border-4 border-black dark:border-white"
               />
