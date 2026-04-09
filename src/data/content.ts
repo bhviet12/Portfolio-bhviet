@@ -11,6 +11,8 @@ export const frontendStack: SkillItem[] = [
 export const backendStack: SkillItem[] = [
   { name: 'Node.js', icon: 'memory', tag: 'LANGUAGE' },
   { name: 'Laravel', icon: 'code', tag: 'FRAMEWORK' },
+  { name: 'Spring Boot', icon: 'settings_ethernet', tag: 'FRAMEWORK' },
+  { name: 'MySQL', icon: 'storage', tag: 'DATABASE' },
   { name: 'PostgreSQL', icon: 'storage', tag: 'DATABASE' },
   { name: 'MongoDB', icon: 'database', tag: 'DATABASE' },
 ];
