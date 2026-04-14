@@ -21,7 +21,12 @@ export default function ProjectSection() {
         {/* Project Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
           {projects.map((project) => (
-            <div key={project.id} className="group relative" data-aos="fade-up">
+            <div
+              key={project.id}
+              className="group relative cursor-pointer"
+              data-aos="fade-up"
+              onClick={() => project.link && window.open(project.link, '_blank')}
+            >
               {/* Card */}
               <div className="bg-white dark:bg-[#0a0a0a] border-4 border-black dark:border-white p-6 md:p-8 transition-all group-hover:-translate-y-1 group-hover:shadow-brutal">
                 {/* Image */}
@@ -65,6 +70,19 @@ export default function ProjectSection() {
                     </span>
                   ))}
                 </div>
+
+                {/* View Project Button */}
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-5 block text-center bg-[#E31B23] hover:bg-black dark:hover:bg-white text-white dark:text-black text-xs font-black uppercase px-4 py-2 border-2 border-[#E31B23] hover:border-black dark:hover:border-white transition-all"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    ↗ View Project
+                  </a>
+                )}
               </div>
             </div>
           ))}

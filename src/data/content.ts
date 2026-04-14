@@ -1,4 +1,5 @@
 // src/data/content.ts
+import { LiaAnkhSolid } from 'react-icons/lia';
 import type { SkillItem } from '../types';
 
 export const frontendStack: SkillItem[] = [
@@ -34,27 +35,30 @@ export const toolsStack: SkillItem[] = [
 
 export const projects = [
   {
-    id: 'ecommerce' as const,
-    titleKey: 'proj_ecommerce_name' as const,
-    descKey: 'proj_ecommerce_desc' as const,
-    tagsKey: 'proj_ecommerce_tags' as const,
+    id: 'crypto_chart' as const,
+    titleKey: 'proj_crypto_chart_name' as const,
+    descKey: 'proj_crypto_chart_desc' as const,
+    tagsKey: 'proj_crypto_chart_tags' as const,
     isDeployed: true,
     img: '/bg1.png',
+    link: 'https://chart-blockchainblockchain.vercel.app/',
   },
   {
-    id: 'fitapp' as const,
-    titleKey: 'proj_fitapp_name' as const,
-    descKey: 'proj_fitapp_desc' as const,
-    tagsKey: 'proj_fitapp_tags' as const,
-    isDeployed: false,
-    img: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80',
-  },
-  {
-    id: 'corpweb' as const,
-    titleKey: 'proj_corpweb_name' as const,
-    descKey: 'proj_corpweb_desc' as const,
-    tagsKey: 'proj_corpweb_tags' as const,
+    id: 'christmas_movie' as const,
+    titleKey: 'proj_christmas_movie_name' as const,
+    descKey: 'proj_christmas_movie_desc' as const,
+    tagsKey: 'proj_christmas_movie_tags' as const,
     isDeployed: true,
-    img: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=600&q=80',
+    img: '/bg2.png',
+    link: 'https://booking-omega-vert.vercel.app/',
+  },
+  {
+    id: 'clinic_td' as const,
+    titleKey: 'proj_clinic_td_name' as const,
+    descKey: 'proj_clinic_td_desc' as const,
+    tagsKey: 'proj_clinic_td_tags' as const,
+    isDeployed: false,
+    img: '/bg3.png',
+      link: 'http://160.30.173.225:8009/',
   },
 ];
