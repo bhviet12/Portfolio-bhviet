@@ -1,5 +1,4 @@
 // src/data/content.ts
-import { LiaAnkhSolid } from 'react-icons/lia';
 import type { SkillItem } from '../types';
 
 export const frontendStack: SkillItem[] = [
@@ -59,6 +58,15 @@ export const projects = [
     tagsKey: 'proj_clinic_td_tags' as const,
     isDeployed: false,
     img: '/bg3.png',
-      link: 'http://160.30.173.225:8009/',
+    link: 'http://160.30.173.225:8009/',
+  },
+  {
+    id: 'industrial_park' as const,
+    titleKey: 'proj_industrial_park_name' as const,
+    descKey: 'proj_industrial_park_desc' as const,
+    tagsKey: 'proj_industrial_park_tags' as const,
+    isDeployed: false,
+    img: '/bg4.png',
+    link: undefined,
   },
 ];
