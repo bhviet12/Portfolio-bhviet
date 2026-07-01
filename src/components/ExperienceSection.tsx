@@ -19,6 +19,8 @@ const experienceRoles = [
       'exp_role1_task10',
       'exp_role1_task11',
       'exp_role1_task12',
+      'exp_role1_task13',
+      'exp_role1_task14',
     ] as TransKey[],
     isCurrent: true,
     shadowClass: 'shadow-brutal-red',
