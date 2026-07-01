@@ -126,7 +126,7 @@ const translations = {
     proj_clinic_td_name: 'Hệ_Thống_Quản_Lý_Phòng_Khám_T&D',
     proj_clinic_td_desc: 'Hệ thống quản lý phòng khám da liễu thẩm mỹ full-stack với React 19 + TypeScript (Frontend) và Spring Boot 3.4.2 + Java 17 (Backend). Hỗ trợ 3 vai trò: Admin, Bác sĩ, Lễ tân với workflow riêng biệt. Tính năng gồm đặt lịch hẹn online, hồ sơ bệnh án điện tử (EMR), thanh toán POS, xuất hóa đơn PDF, thống kê doanh thu với Materialized Views. Xác thực JWT với Redis token whitelist, i18n EN/VI, responsive design.',
     proj_clinic_td_tags: 'React 19 · TypeScript · Redux Toolkit · React Query · Ant Design 6 · Tailwind CSS 3 · Sass · Spring Boot 3.4 · Java 17 · PostgreSQL · Redis · JWT · i18next · Recharts · Vite · PDF Export',
-    proj_industrial_park_name: 'Hệ_Thống_Quản_Lý_Cụm_Công_Nghiệp_Phú_Thọ',
+    proj_industrial_park_name: 'Hệ Thống Quản Lý Cụm Công Nghiệp Phú Thọ',
     proj_industrial_park_desc: 'Ứng dụng GIS (Geographic Information System) web-based quản lý toàn diện các cụm công nghiệp tỉnh Phú Thọ. Hệ thống cung cấp bản đồ tương tác Mapbox/Leaflet, quản lý dữ liệu không gian địa lý với PostGIS, quản trị khu công nghiệp (50+ trường), đăng ký doanh nghiệp, theo dõi giấy phép, báo cáo sản lượng/lao động và giám sát môi trường. RBAC với 50+ permissions, Dashboard chuyên biệt, Form Template System.',
     proj_industrial_park_tags: 'Laravel 12 · PHP 8.2 · React 19 · TypeScript · Inertia.js 2 · PostGIS · PostgreSQL · Mapbox GL JS · Leaflet · Turf.js · Radix UI · TanStack Table · Chart.js · Docker · Redis · Laravel Sanctum',
     proj_sentinel_name: 'PROJECT_SENTINEL_V2',
